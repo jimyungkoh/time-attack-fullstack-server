@@ -53,7 +53,7 @@ export class UsersController {
       secure: true,
       sameSite: 'none',
       domain:
-        'https://port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app/',
+        'port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app',
       maxAge: this.maxAge,
     });
 
@@ -86,7 +86,7 @@ export class UsersController {
       secure: true,
       sameSite: 'none',
       domain:
-        'https://port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app/',
+        'port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app',
       maxAge: this.maxAge,
     });
 
@@ -117,7 +117,7 @@ export class UsersController {
       secure: true,
       sameSite: 'none',
       domain:
-        'https://port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app/',
+        'port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app',
       maxAge: this.maxAge,
     });
 
