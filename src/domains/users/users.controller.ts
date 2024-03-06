@@ -49,7 +49,11 @@ export class UsersController {
     });
 
     response.cookie('accessToken', accessToken, {
+      httpOnly: true,
       secure: true,
+      sameSite: 'none',
+      domain:
+        'https://port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app/',
       maxAge: this.maxAge,
     });
 
@@ -78,7 +82,11 @@ export class UsersController {
     });
 
     response.cookie('accessToken', accessToken, {
+      httpOnly: true,
       secure: true,
+      sameSite: 'none',
+      domain:
+        'https://port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app/',
       maxAge: this.maxAge,
     });
 
@@ -99,15 +107,17 @@ export class UsersController {
     @Res({ passthrough: true })
     response: Response,
   ) {
-    response.clearCookie('accessToken');
-
     const accessToken = this.jwtManagerService.sign('user', {
       id: user.id,
       email: user.email,
     });
 
     response.cookie('accessToken', accessToken, {
+      httpOnly: true,
       secure: true,
+      sameSite: 'none',
+      domain:
+        'https://port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app/',
       maxAge: this.maxAge,
     });
 
