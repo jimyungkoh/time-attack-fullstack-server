@@ -96,7 +96,13 @@ export class UsersController {
   @Private('user')
   @Delete('/auth/log-out')
   async logOut(@Res({ passthrough: true }) response: Response) {
-    response.clearCookie('accessToken');
+    response.clearCookie('accessToken', {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
+      domain:
+        'port-0-time-attack-fullstack-server-dc9c2nltdolabq.sel5.cloudtype.app',
+    });
     return;
   }
 
